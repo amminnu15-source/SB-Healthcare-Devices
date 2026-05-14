@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>signup</title>
+
+<link rel="stylesheet" href="./signup.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+<section class="signup-page">
+
+  <div class="signup-card">
+
+    <div class="signup-logo">
+      <a href="index.html">
+        <img src="images/logo.jpeg" alt="SB Healthcare Devices">
+      </a>
+    </div>
+
+    <h2>Create Account</h2>
+    <p>Register to access your SB Healthcare Devices account.</p>
+
+    <form id="signupForm">
+
+      <div class="signup-group">
+        <label>Full Name</label>
+        <input type="text" id="signupName" placeholder="Enter full name" required>
+      </div>
+
+      <div class="signup-group">
+        <label>Email Address</label>
+        <input type="email" id="signupEmail" placeholder="Enter email address" required>
+      </div>
+
+      <div class="signup-group">
+        <label>Phone Number</label>
+        <input type="tel" id="signupPhone" placeholder="Enter phone number" required>
+      </div>
+
+      <div class="signup-group password-group">
+        <label>Password</label>
+        <div class="password-box">
+          <input type="password" id="signupPassword" placeholder="Create password" required>
+          <i class="fa-regular fa-eye" id="toggleSignupPassword"></i>
+        </div>
+      </div>
+
+      <button type="submit" class="signup-btn">Create Account</button>
+
+      <div class="login-link">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+       <script src="./signup.js"></script>
+
+</body>
+</html>
