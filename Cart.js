@@ -1,18 +1,32 @@
 const cartItemsContainer = document.getElementById("cartItems");
 const cartSubtotal = document.getElementById("cartSubtotal");
 const cartTotal = document.getElementById("cartTotal");
+const checkoutBtn = document.querySelector(".checkout-btn");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function formatPrice(price){
-  return "₹" + price.toLocaleString("en-IN");
+  return "₹" + Number(price || 0).toLocaleString("en-IN");
 }
 
 function saveCart(){
   localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+function updateCartCount(){
+  const totalCount = cart.reduce((sum,item)=>{
+    return sum + (item.quantity || 1);
+  },0);
+
+  document.querySelectorAll("#cartCount").forEach(count=>{
+    count.textContent = totalCount;
+  });
 }
 
 function renderCart(){
+  if(!cartItemsContainer) return;
+
   cartItemsContainer.innerHTML = "";
 
   if(cart.length === 0){
@@ -27,14 +41,16 @@ function renderCart(){
 
     cartSubtotal.textContent = "₹0";
     cartTotal.textContent = "₹0";
+    updateCartCount();
     return;
   }
 
   let subtotal = 0;
 
-  cart.forEach((item, index) => {
+  cart.forEach((item,index)=>{
     const qty = item.quantity || 1;
-    const itemTotal = item.price * qty;
+    const price = Number(item.price || 0);
+    const itemTotal = price * qty;
 
     subtotal += itemTotal;
 
@@ -46,17 +62,17 @@ function renderCart(){
 
       <div class="cart-info">
         <h3>${item.name}</h3>
-        <p>${formatPrice(item.price)}</p>
+        <p>${formatPrice(price)}</p>
       </div>
 
       <div class="cart-actions">
         <div class="qty-box">
-          <button onclick="decreaseQty(${index})">−</button>
+          <button type="button" onclick="decreaseQty(${index})">−</button>
           <span>${qty}</span>
-          <button onclick="increaseQty(${index})">+</button>
+          <button type="button" onclick="increaseQty(${index})">+</button>
         </div>
 
-        <button class="remove-btn" onclick="removeItem(${index})">
+        <button type="button" class="remove-btn" onclick="removeItem(${index})">
           Remove
         </button>
       </div>
@@ -67,6 +83,7 @@ function renderCart(){
 
   cartSubtotal.textContent = formatPrice(subtotal);
   cartTotal.textContent = formatPrice(subtotal);
+  updateCartCount();
 }
 
 function increaseQty(index){
@@ -79,7 +96,7 @@ function decreaseQty(index){
   if((cart[index].quantity || 1) > 1){
     cart[index].quantity -= 1;
   }else{
-    cart.splice(index, 1);
+    cart.splice(index,1);
   }
 
   saveCart();
@@ -87,28 +104,20 @@ function decreaseQty(index){
 }
 
 function removeItem(index){
-  cart.splice(index, 1);
+  cart.splice(index,1);
   saveCart();
   renderCart();
 }
 
+if(checkoutBtn){
+  checkoutBtn.addEventListener("click",()=>{
+    if(cart.length === 0){
+      alert("Your cart is empty. Please add products first.");
+      return;
+    }
+
+    window.location.href = "checkout.html";
+  });
+}
+
 renderCart();
-
-
-
-
-
-
-
-const checkoutBtn = document.querySelector(".checkout-btn");
-
-checkoutBtn.addEventListener("click", () => {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  if(cart.length === 0){
-    alert("Your cart is empty. Please add products first.");
-    return;
-  }
-
-  window.location.href = "checkout.html";
-});

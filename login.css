@@ -213,3 +213,121 @@
     align-items:flex-start;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================
+   MOBILE : < 640px
+==================================== */
+
+@media screen and (max-width:639px){
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.login-page{
+    min-height:100vh;
+    height:auto;
+    padding:18px;
+    overflow:auto;
+}
+
+.login-card{
+    max-width:100%;
+    padding:24px 20px;
+    border-radius:22px;
+}
+
+.login-logo img{
+    width:155px;
+}
+
+.login-card h2{
+    font-size:22px;
+}
+
+.login-card > p{
+    font-size:14px;
+}
+
+.login-options{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.login-btn{
+    height:50px;
+}
+
+}
+
+
+/* ====================================
+   TABLET : 640px - 1024px
+==================================== */
+
+@media screen and (min-width:640px) and (max-width:1024px){
+
+.login-page{
+    padding:30px 6%;
+}
+
+.login-card{
+    max-width:520px;
+    padding:34px 38px;
+}
+
+.login-logo img{
+    width:175px;
+}
+
+}
+
+
+/* ====================================
+   DESKTOP : 1024px - 1280px
+==================================== */
+
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+.login-card{
+    max-width:510px;
+}
+
+}
+
+
+/* ====================================
+   LARGE : > 1280px
+==================================== */
+
+@media screen and (min-width:1281px){
+
+.login-card{
+    max-width:540px;
+    padding:34px 42px;
+}
+
+.login-logo img{
+    width:190px;
+}
+
+.login-card h2{
+    font-size:26px;
+}
+
+}

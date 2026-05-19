@@ -1,0 +1,319 @@
+body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:#f5f9fc;
+  font-family:"DM Sans",sans-serif;
+}
+
+.error-section{
+  width:100%;
+  height:100vh;
+  padding:20px;
+  background:#f5f9fc;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+.error-card{
+  width:100%;
+  max-width:760px;
+  background:#ffffff;
+  border:1px solid #dbe9f2;
+  border-radius:32px;
+  padding:50px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(10,61,98,.08);
+  box-sizing:border-box;
+}
+
+.error-icon{
+  width:86px;
+  height:86px;
+  border-radius:24px;
+  background:#e4f3fb;
+  color:#0a5c88;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  margin:0 auto 24px;
+}
+
+.error-card h1{
+  color:#0a5c88;
+  font-size:90px;
+  line-height:1;
+  font-weight:900;
+  margin:0 0 10px;
+}
+
+.error-card h2{
+  color:#06192f;
+  font-size:34px;
+  font-weight:900;
+  margin-bottom:16px;
+}
+
+.error-card p{
+  color:#5d7387;
+  font-size:16px;
+  line-height:1.8;
+  max-width:580px;
+  margin:0 auto 28px;
+}
+
+.error-search{
+  max-width:560px;
+  height:54px;
+  margin:0 auto 28px;
+  display:flex;
+  border:1px solid #d2e2ec;
+  border-radius:16px;
+  overflow:hidden;
+  background:#ffffff;
+}
+
+.error-search input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding:0 18px;
+  font-size:15px;
+  color:#06192f;
+  background:transparent;
+}
+
+.error-search button{
+  width:60px;
+  border:none;
+  background:#0a5c88;
+  color:#ffffff;
+  cursor:pointer;
+  font-size:18px;
+  transition:.3s ease;
+}
+
+.error-search button:hover{
+  background:#08496b;
+}
+
+.error-actions{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.error-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 26px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:900;
+  transition:.3s ease;
+}
+
+.error-btn.primary{
+  background:#0a5c88;
+  color:#ffffff;
+}
+
+.error-btn.primary:hover{
+  background:#08496b;
+  transform:translateY(-3px);
+}
+
+.error-btn.secondary{
+  background:#e4f3fb;
+  color:#0a5c88;
+}
+
+.error-btn.secondary:hover{
+  background:#d6edf9;
+  transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+  body{
+    overflow:auto;
+  }
+
+  .error-section{
+    height:auto;
+    min-height:100vh;
+    padding:30px 5%;
+  }
+
+  .error-card{
+    padding:38px 24px;
+  }
+
+  .error-card h1{
+    font-size:72px;
+  }
+
+  .error-card h2{
+    font-size:28px;
+  }
+
+  .error-search{
+    height:50px;
+  }
+
+  .error-btn{
+    width:100%;
+  }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:639px){
+
+body{
+    overflow:auto;
+}
+
+.error-section{
+    min-height:100vh;
+    height:auto;
+    padding:30px 5%;
+}
+
+.error-card{
+    padding:35px 22px;
+    border-radius:24px;
+}
+
+.error-icon{
+    width:70px;
+    height:70px;
+    font-size:28px;
+    border-radius:18px;
+}
+
+.error-card h1{
+    font-size:65px;
+}
+
+.error-card h2{
+    font-size:26px;
+}
+
+.error-card p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.error-search{
+    height:50px;
+}
+
+.error-search input{
+    font-size:14px;
+    padding:0 15px;
+}
+
+.error-search button{
+    width:55px;
+}
+
+.error-actions{
+    flex-direction:column;
+}
+
+.error-btn{
+    width:100%;
+}
+
+}
+
+
+
+@media screen and (min-width:640px) and (max-width:1024px){
+
+body{
+    overflow:auto;
+}
+
+.error-section{
+    padding:40px 6%;
+}
+
+.error-card{
+    max-width:700px;
+    padding:45px 35px;
+}
+
+.error-card h1{
+    font-size:80px;
+}
+
+.error-card h2{
+    font-size:32px;
+}
+
+.error-card p{
+    font-size:15px;
+}
+
+.error-search{
+    max-width:100%;
+}
+
+.error-btn{
+    min-width:180px;
+}
+
+}
+
+
+
+
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+.error-card{
+    max-width:740px;
+}
+
+.error-card h1{
+    font-size:88px;
+}
+
+}
+
+
+
+
+@media screen and (min-width:1281px){
+
+.error-card{
+    max-width:850px;
+    padding:60px;
+}
+
+.error-card h1{
+    font-size:100px;
+}
+
+.error-card h2{
+    font-size:38px;
+}
+
+.error-card p{
+    font-size:17px;
+}
+
+}

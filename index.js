@@ -199,27 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function(){
 
-  const brandCards = document.querySelectorAll(".brand-card");
-
-  const brandObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if(entry.isIntersecting){
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 80);
-
-        brandObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold:0.2
-  });
-
-  brandCards.forEach(card => brandObserver.observe(card));
-
-});
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -274,39 +254,28 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
 
-  const ctaSection = document.querySelector(".medical-cta-container");
 
-  const ctaObserver = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
+document.addEventListener("DOMContentLoaded", function(){
 
+  const brandCards = document.querySelectorAll(".brand-card");
+
+  const brandObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
       if(entry.isIntersecting){
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, index * 80);
 
-        entry.target.animate([
-          {
-            opacity:0,
-            transform:"translateY(60px)"
-          },
-          {
-            opacity:1,
-            transform:"translateY(0)"
-          }
-        ],{
-          duration:900,
-          easing:"ease",
-          fill:"forwards"
-        });
-
+        brandObserver.unobserve(entry.target);
       }
-
     });
-
   }, {
     threshold:0.2
   });
 
-  ctaObserver.observe(ctaSection);
+  brandCards.forEach(card => brandObserver.observe(card));
 
 });
+

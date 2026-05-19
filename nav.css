@@ -949,3 +949,57 @@
     width:18px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wishlist-btn{
+  position:relative;
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#0a3d62;
+  border:1px solid #d6e3f3;
+  border-radius:10px;
+  text-decoration:none;
+  background:#fff;
+  cursor:pointer;
+  z-index:10;
+}
+
+#wishlistCount{
+  pointer-events:none;
+}
+
+.wishlist-btn:hover{
+  border-color:#1e88e5;
+  background:#f8fbff;
+}
+
+#wishlistCount{
+  position:absolute;
+  top:-7px;
+  right:-7px;
+  min-width:20px;
+  height:20px;
+  padding:0 5px;
+  border-radius:50px;
+  background:#ff4d5a;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}

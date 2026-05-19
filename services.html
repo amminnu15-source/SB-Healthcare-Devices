@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SB HEALTHCARE DEVICES | SURGICAL LIFE CARE EQUIPMENTS</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ <link rel="stylesheet" href="./service.css">
+  <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+<body>
+
+
+
+    <header class="hs-navbar">
+
+
+  <div class="hs-top">
+    <a href="./signup.html">Become a seller</a>
+    <a href="./signup.html">Seller / Vendor Login</a>
+    <a href="./signup.html">Create Support Ticket</a>
+    <a href="./signup.html">Reward Program</a>
+    <div class="spacer"></div>
+
+  
+    <div class="top-dropdown-wrap">
+      <button class="currency-btn" onclick="toggleDrop('currency-drop')">
+        ₹ INR <i class="fa-solid fa-chevron-down" style="font-size:9px"></i>
+      </button>
+      <div id="currency-drop" class="top-dropdown">
+        <div class="dropdown-header">Select Currency</div>
+        <a href="#"><i class="fa-solid fa-indian-rupee-sign"></i> ₹ INR — Indian Rupee</a>
+        <a href="#"><i class="fa-solid fa-dollar-sign"></i> $ USD — US Dollar</a>
+        <a href="#"><i class="fa-solid fa-euro-sign"></i> € EUR — Euro</a>
+        <a href="#"><i class="fa-solid fa-sterling-sign"></i> £ GBP — British Pound</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hs-main">
+
+   
+    <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+
+
+<a href="index.html" class="logo sb-logo">
+  <img src="./images/logo.jpeg" alt="SB Healthcare Devices Logo">
+</a>
+
+   
+  <!-- NAV LINKS -->
+
+<nav class="hs-nav-links">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html" class="active">Services</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+   
+   <!-- SEARCH -->
+<!-- SEARCH BAR -->
+<form class="search-box" onsubmit="searchProducts(event)">
+  <input 
+    type="text"
+    id="searchInput"
+    placeholder="Search medicines, devices, equipment..."
+    autocomplete="off"
+  >
+
+  <button type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+
+  <div class="search-suggestions" id="searchSuggestions"></div>
+</form>
+
+    
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-sidebar" id="mobileSidebar">
+
+  <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="./about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+  <a href="./services.html"><i class="fa-solid fa-briefcase-medical"></i> Services</a>
+  <a href="./products.html"><i class="fa-solid fa-box"></i> Products</a>
+  <a href="./contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+  <a href="./wishlist.html">
+    <i class="fa-regular fa-heart"></i>
+    Wishlist
+    <small id="wishlistCount">0</small>
+  </a>
+
+  <a href="./Cart.html">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Cart
+  </a>
+
+  <a href="./login.html">
+    <i class="fa-solid fa-right-to-bracket"></i>
+    Login
+  </a>
+
+  <a href="./signup.html">
+    <i class="fa-solid fa-user-plus"></i>
+    Create Account
+  </a>
+
+</div>
+
+
+<div class="dropdown-wrap">
+
+  <button class="phone-btn" onclick="toggleDrop('phone-drop')">
+    <i class="fa-solid fa-phone-volume"></i>
+
+    <span>9533492218</span>
+
+    <i class="fa-solid fa-chevron-down" style="font-size:10px"></i>
+  </button>
+
+  <div id="phone-drop" class="dropdown right">
+
+    <div class="dropdown-header">Contact Us</div>
+
+   
+    <a href="tel:+9533492218">
+      <i class="fa-solid fa-phone"></i>
+      +91 9533492218
+    </a>
+
+  
+
+    <hr>
+
+
+    <a href="mailto:sbhealthcaredevices@gmail.com">
+      <i class="fa-regular fa-envelope"></i>
+      sbhealthcaredevices@gmail.com
+    </a>
+
+   
+    <a href="https://wa.me/919533492218" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      WhatsApp Support
+    </a>
+
+    <hr>
+
+    
+    <a href="https://www.google.com/maps/search/?api=1&query=H.No.+47-5-1244%2F1+Kannemula+Ganathi+Colony+Near+Mulugu+Road+Hanumakonda+Telangana+506001"
+      target="_blank">
+
+      <i class="fa-solid fa-location-dot"></i>
+
+      Kannemula Ganathi Colony,
+Near Mulugu Road, Hanumakonda
+    </a>
+
+    
+    <a href="#">
+      <i class="fa-regular fa-clock"></i>
+      Mon–Sat, 9am – 6pm
+    </a>
+
+  </div>
+
+</div>
+
+    
+    <a href="./products.html" class="icon-link" title="Analytics"><i class="fa-solid fa-chart-simple"></i></a>
+
+
+    <a href="./wishlist.html" class="wishlist-btn" title="Wishlist">
+  <i class="fa-regular fa-heart"></i>
+  <small id="wishlistCount">0</small>
+</a>
+
+   
+    <div class="dropdown-wrap">
+      <button class="account-btn" onclick="toggleDrop('account-drop')">
+        <i class="fa-regular fa-circle-user" style="font-size:16px"></i>
+        <span>Account</span>
+        <i class="fa-solid fa-chevron-down" style="font-size:10px"></i>
+      </button>
+      <div id="account-drop" class="dropdown right">
+        <div class="dropdown-header">My Account</div>
+        <a href="./User Profile.html"><i class="fa-regular fa-circle-user"></i> My Profile</a>
+        <a href="./Thank You Page.html"><i class="fa-solid fa-box"></i> My Orders</a>
+        <a href="./wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        <a href="./Cart.html"><i class="fa-solid fa-tag"></i> My Coupons</a>
+        <a href="./Cart.html"><i class="fa-solid fa-star"></i> Rewards</a>
+        <hr>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+		  <a href="./login.html">
+    <i class="fa-solid fa-right-to-bracket"></i>
+    Login
+  </a>
+
+
+  <a href="./signup.html">
+    <i class="fa-solid fa-user-plus"></i>
+    Create Account
+  </a>
+      </div>
+    </div>
+
+  <a href="./Cart.html" class="cart-btn">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span>Cart</span>
+  <small id="cartCount">0</small>
+</a>
+
+  </div>
+
+
+
+</header>
+
+
+
+<section class="services-hero">
+  <div class="services-hero-overlay"></div>
+
+  <div class="services-hero-content">
+    <span class="services-hero-badge">Healthcare Equipment Services</span>
+
+    <h1>Reliable Medical Device Services for Every Care Need</h1>
+
+    <p>
+      From oxygen concentrators and CPAP machines to wheelchairs and homecare equipment,
+      SB Healthcare Devices provides trusted support, guidance, delivery, and after-sales assistance.
+    </p>
+
+    <div class="services-hero-buttons">
+      <a href="#servicesOverview" class="services-hero-btn primary">Explore Services</a>
+      <a href="contact.html" class="services-hero-btn secondary">Contact Support</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="services-overview" id="servicesOverview">
+
+  <div class="section-heading">
+    <span class="section-tag">OUR SERVICES</span>
+
+    <h2>Complete Healthcare Equipment Solutions</h2>
+
+    <p>
+      Explore our professional medical equipment services designed for hospitals,
+      clinics, homecare patients, and healthcare providers.
+    </p>
+  </div>
+
+
+  <div class="services-grid">
+
+    <!-- CARD -->
+
+    <div class="service-card">
+
+      <div class="service-image">
+        <img src="images/Oxygen Analyzer-11.jpg" alt="">
+      </div>
+
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-lungs"></i>
+        </div>
+
+        <h3>Oxygen Concentrator Support</h3>
+
+        <p>
+          Installation, setup guidance, maintenance support, and delivery
+          assistance for oxygen concentrators.
+        </p>
+
+        <ul>
+          <li>Home Delivery</li>
+          <li>Setup Guidance</li>
+          <li>24/7 Support</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="service-card">
+
+      <div class="service-image">
+        <img src="images/CPAP BiPAP Mask & Accessories-15.jpg" alt="">
+      </div>
+
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-bed-pulse"></i>
+        </div>
+
+        <h3>CPAP & BiPAP Services</h3>
+
+        <p>
+          Professional respiratory device solutions with product support,
+          accessories, and expert assistance.
+        </p>
+
+        <ul>
+          <li>Mask Accessories</li>
+          <li>Respiratory Care</li>
+          <li>Machine Support</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="service-card">
+
+      <div class="service-image">
+        <img src="images/Wheelchair-9.jpg" alt="">
+      </div>
+
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-wheelchair"></i>
+        </div>
+
+        <h3>Wheelchair & Mobility Aid</h3>
+
+        <p>
+          Comfortable mobility solutions including wheelchairs,
+          walkers, crutches, and rehabilitation support.
+        </p>
+
+        <ul>
+          <li>Mobility Support</li>
+          <li>Homecare Products</li>
+          <li>Premium Quality</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="service-card">
+
+      <div class="service-image">
+        <img src="images/Homecare Equipments-1.jpg" alt="">
+      </div>
+
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-kit-medical"></i>
+        </div>
+
+        <h3>Homecare Equipment</h3>
+
+        <p>
+          Trusted home healthcare devices for patient comfort,
+          recovery, and long-term healthcare support.
+        </p>
+
+        <ul>
+          <li>Medical Devices</li>
+          <li>After-Sales Support</li>
+          <li>Trusted Brands</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="service-card">
+
+      <div class="service-image">
+        <img src="images/Respiratory Mask-19.jpg" alt="">
+      </div>
+
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <h3>Respiratory Care Solutions</h3>
+
+        <p>
+          Respiratory equipment and healthcare support for
+          breathing care, therapy, and patient monitoring.
+        </p>
+
+        <ul>
+          <li>Therapy Support</li>
+          <li>Advanced Devices</li>
+          <li>Expert Guidance</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="service-card">
+
+      <div class="service-image">
+        <img src="images/service-6.jpg" alt="">
+      </div>
+
+      <div class="service-content">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-house-medical"></i>
+        </div>
+
+        <h3>Healthcare Consultation</h3>
+
+        <p>
+          Get professional guidance to choose the right
+          medical equipment based on patient requirements.
+        </p>
+
+        <ul>
+          <li>Product Guidance</li>
+          <li>Affordable Solutions</li>
+          <li>Customer Assistance</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="premium-counter-section">
+
+  <div class="counter-bg-shape shape-1"></div>
+  <div class="counter-bg-shape shape-2"></div>
+
+  <div class="premium-counter-heading">
+
+    <span class="counter-tag">
+      OUR ACHIEVEMENTS
+    </span>
+
+    <h2>
+      Trusted Healthcare Services Across Every Need
+    </h2>
+
+    <p>
+      SB Healthcare Devices continues to support hospitals, clinics,
+      and homecare patients with reliable medical equipment,
+      professional assistance, and trusted healthcare solutions.
+    </p>
+
+  </div>
+
+
+  <div class="premium-counter-grid">
+
+    <!-- CARD -->
+
+    <div class="premium-counter-card">
+
+      <div class="counter-icon">
+        <i class="fa-solid fa-users"></i>
+      </div>
+
+      <h3>
+        <span class="counter" data-target="10000">0</span>+
+      </h3>
+
+      <h4>Happy Customers</h4>
+
+      <p>
+        Trusted by thousands of patients, hospitals,
+        and healthcare professionals.
+      </p>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="premium-counter-card">
+
+      <div class="counter-icon">
+        <i class="fa-solid fa-boxes-stacked"></i>
+      </div>
+
+      <h3>
+        <span class="counter" data-target="50">0</span>+
+      </h3>
+
+      <h4>Healthcare Categories</h4>
+
+      <p>
+        Wide range of medical devices and healthcare
+        equipment solutions.
+      </p>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="premium-counter-card">
+
+      <div class="counter-icon">
+        <i class="fa-solid fa-truck-medical"></i>
+      </div>
+
+      <h3>
+        <span class="counter" data-target="5000">0</span>+
+      </h3>
+
+      <h4>Successful Deliveries</h4>
+
+      <p>
+        Fast and reliable medical equipment delivery
+        across multiple locations.
+      </p>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="premium-counter-card">
+
+      <div class="counter-icon">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+
+      <h3>
+        <span class="counter" data-target="24">0</span>/7
+      </h3>
+
+      <h4>Customer Support</h4>
+
+      <p>
+        Dedicated healthcare support team ready
+        to assist customers anytime.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="detailed-services-section">
+
+  <div class="section-heading">
+    <span class="section-tag">DETAILED SERVICES</span>
+
+    <h2>Professional Healthcare Equipment Services</h2>
+
+    <p>
+      We provide complete healthcare equipment solutions with expert guidance,
+      product support, delivery assistance, and after-sales service.
+    </p>
+  </div>
+
+
+  <!-- SERVICE -->
+
+  <div class="detailed-service-card">
+
+    <div class="detailed-service-image">
+      <img src="images/oxygen-concentrator.jpg" alt="">
+    </div>
+
+    <div class="detailed-service-content">
+
+      <span class="service-small-tag">
+        Respiratory Care
+      </span>
+
+      <h3>Oxygen Concentrator Services</h3>
+
+      <p>
+        Our oxygen concentrator services include product guidance, installation
+        support, maintenance assistance, and home delivery for patients who
+        require reliable oxygen therapy solutions.
+      </p>
+
+      <div class="service-feature-grid">
+
+        <div class="feature-box">
+          <i class="fa-solid fa-truck-medical"></i>
+          <span>Fast Delivery</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <span>Setup Assistance</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Support</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-shield-heart"></i>
+          <span>Warranty Support</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SERVICE -->
+
+  <div class="detailed-service-card reverse">
+
+    <div class="detailed-service-image">
+      <img src="images/cpap-machine.jpg" alt="">
+    </div>
+
+    <div class="detailed-service-content">
+
+      <span class="service-small-tag">
+        Sleep Therapy
+      </span>
+
+      <h3>CPAP & BiPAP Machine Support</h3>
+
+      <p>
+        We provide CPAP and BiPAP machine setup guidance, respiratory mask
+        accessories, product consultation, and expert support for better
+        breathing therapy and sleep care.
+      </p>
+
+      <div class="service-feature-grid">
+
+        <div class="feature-box">
+          <i class="fa-solid fa-lungs"></i>
+          <span>Respiratory Care</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-bed-pulse"></i>
+          <span>Sleep Support</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-user-doctor"></i>
+          <span>Expert Guidance</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-box-open"></i>
+          <span>Accessories Available</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SERVICE -->
+
+  <div class="detailed-service-card">
+
+    <div class="detailed-service-image">
+      <img src="images/wheelchair.jpg" alt="">
+    </div>
+
+    <div class="detailed-service-content">
+
+      <span class="service-small-tag">
+        Mobility Solutions
+      </span>
+
+      <h3>Wheelchair & Rehabilitation Support</h3>
+
+      <p>
+        We offer comfortable wheelchairs, walkers, crutches, and rehabilitation
+        equipment designed to improve mobility, independence, and patient comfort.
+      </p>
+
+      <div class="service-feature-grid">
+
+        <div class="feature-box">
+          <i class="fa-solid fa-wheelchair"></i>
+          <span>Mobility Support</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-person-walking"></i>
+          <span>Rehabilitation</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-house-medical"></i>
+          <span>Homecare Use</span>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-medal"></i>
+          <span>Premium Quality</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="customer-review-section" id="customerReviews">
+
+  <div class="review-heading">
+    <span class="review-tag">CUSTOMER REVIEWS</span>
+    <h2>What Our Customers Say</h2>
+    <p>Read trusted feedback from our healthcare customers and share your own experience.</p>
+  </div>
+
+  <div class="review-layout">
+
+    <div class="review-list-box">
+      <div class="review-list" id="reviewList"></div>
+    </div>
+
+    <div class="review-form-card">
+      <h3>Write a Review</h3>
+      <p>Your feedback helps other customers choose the right healthcare equipment.</p>
+
+      <form id="reviewForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="reviewName" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label>Service / Product</label>
+          <input type="text" id="reviewService" placeholder="Ex: Oxygen Concentrator">
+        </div>
+
+        <div class="form-group">
+          <label>Rating</label>
+          <select id="reviewRating">
+            <option value="5">★★★★★ 5 Stars</option>
+            <option value="4">★★★★☆ 4 Stars</option>
+            <option value="3">★★★☆☆ 3 Stars</option>
+            <option value="2">★★☆☆☆ 2 Stars</option>
+            <option value="1">★☆☆☆☆ 1 Star</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Your Review</label>
+          <textarea id="reviewMessage" placeholder="Write your review..." rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="review-submit-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+          Submit Review
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="services-help-cta">
+  <div class="help-cta-content">
+    <span class="help-cta-tag">Expert Medical Guidance</span>
+
+    <h2>Book a Free Equipment Consultation</h2>
+
+    <p>
+      Not sure which medical device is right for your patient or homecare need?
+      Talk with our support team and get clear product guidance before you buy.
+    </p>
+
+    <div class="help-cta-actions">
+      <a href="tel:+919533492218" class="help-btn call">
+        <i class="fa-solid fa-phone"></i>
+        Call Expert
+      </a>
+
+      <a href="contact.html" class="help-btn outline">
+        Send Enquiry
+      </a>
+    </div>
+  </div>
+
+  <div class="help-cta-card">
+    <i class="fa-solid fa-user-doctor"></i>
+    <h3>Free Support</h3>
+    <p>Product selection, setup guidance, delivery help, and after-sales support.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="sb-footer">
+  <div class="sb-footer-container">
+
+    <div class="sb-footer-about">
+      <a href="index.html" class="sb-footer-logo">
+        <img src="images/logo.jpeg" alt="SB Healthcare Devices Logo">
+      </a>
+
+      <p>
+        SB Healthcare Devices provides genuine medical and home healthcare
+        equipment from trusted brands at affordable prices.
+      </p>
+
+      <div class="sb-footer-socials">
+        <a href="https://www.facebook.com/people/Sb-Healthcare-Devices/pfbid02QiPxxEHg7bE7eeDnpVSiEA81E8aiddRvGdP8a3XfciqWyJMZt9fQB9EQPdjXc5rRl/?mibextid=wwXIfr&rdid=1eag7KyMwYZPtuJj&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BhVphG32P%2F%3Fmibextid%3DwwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Quick Links</h3>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./services.html">Services</a>
+      <a href="./products.html">Products</a>
+      <a href="./checkout.html">Contact Us</a>
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Top Categories</h3>
+      <a href="./products.html">Oxygen Concentrator</a>
+      <a href="./products.html">BiPAP Machine</a>
+      <a href="./products.html">CPAP Machine</a>
+      <a href="./products.html">Nebulizer Machine</a>
+      <a href="./products.html">Wheelchair</a>
+ 
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Contact Us</h3>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98715 08509</span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>sbhealthcaredevices@gmail.com</span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>
+          Kannemula Ganathi Colony, Near Mulugu Road,
+          Hanumakonda, Telangana - 506001
+        </span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-regular fa-clock"></i>
+        <span>Mon - Sat : 9:00 AM - 6:00 PM</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sb-footer-bottom">
+    <p>© 2026 SB Healthcare Devices. All Rights Reserved.</p>
+
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Shipping Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="./nav.js"></script>
+<script src="./service.js"></script>
+<script src="./footer.js"></script>
+
+</body>
+</html>

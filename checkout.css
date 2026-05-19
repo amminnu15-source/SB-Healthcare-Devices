@@ -315,7 +315,7 @@ html,body{
   background:#f8fcff;
 }
 
-/* EMPTY */
+
 
 .checkout-empty{
   text-align:center;
@@ -349,7 +349,7 @@ html,body{
   font-weight:900;
 }
 
-/* RESPONSIVE */
+
 
 @media(max-width:1050px){
   .checkout-layout{
@@ -444,4 +444,148 @@ html,body{
 .payment-box input:focus{
   border-color:#1e88e5;
   box-shadow:0 0 0 4px rgba(30,136,229,0.10);
+}
+
+
+
+
+@media screen and (max-width:639px){
+
+.checkout-page{
+    padding:45px 5%;
+}
+
+.checkout-heading{
+    margin-bottom:30px;
+}
+
+.checkout-heading h1{
+    font-size:32px;
+    line-height:1.25;
+}
+
+.checkout-heading p{
+    font-size:15px;
+}
+
+.checkout-layout{
+    grid-template-columns:1fr;
+    gap:24px;
+}
+
+.checkout-form-box,
+.checkout-summary-box{
+    padding:24px 20px;
+    border-radius:22px;
+}
+
+.checkout-form-box h2,
+.checkout-summary-box h2{
+    font-size:22px;
+}
+
+.checkout-row,
+.payment-methods{
+    grid-template-columns:1fr;
+}
+
+.checkout-summary-box{
+    position:static;
+}
+
+.checkout-item{
+    grid-template-columns:65px 1fr;
+}
+
+.checkout-item img{
+    width:65px;
+    height:60px;
+}
+
+.place-order-btn{
+    font-size:16px;
+    padding:16px;
+}
+
+}
+
+
+
+
+@media screen and (min-width:640px) and (max-width:1024px){
+
+.checkout-page{
+    padding:55px 6%;
+}
+
+.checkout-heading h1{
+    font-size:38px;
+}
+
+.checkout-layout{
+    grid-template-columns:1fr;
+    gap:28px;
+}
+
+.checkout-summary-box{
+    position:static;
+}
+
+.checkout-form-box,
+.checkout-summary-box{
+    padding:30px;
+}
+
+.payment-methods{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+
+
+
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+.checkout-page{
+    padding:60px 6%;
+}
+
+.checkout-layout{
+    grid-template-columns:minmax(0,1fr) 360px;
+    gap:26px;
+}
+
+.checkout-summary-box{
+    max-width:360px;
+}
+
+.checkout-heading h1{
+    font-size:40px;
+}
+
+}
+
+
+
+
+@media screen and (min-width:1281px){
+
+.checkout-container{
+    max-width:1450px;
+}
+
+.checkout-layout{
+    grid-template-columns:minmax(0,1fr) 400px;
+    gap:36px;
+}
+
+.checkout-summary-box{
+    max-width:400px;
+}
+
+.checkout-heading h1{
+    font-size:46px;
+}
+
 }

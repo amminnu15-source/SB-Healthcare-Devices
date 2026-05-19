@@ -1,4 +1,4 @@
-/* HERO REVEAL */
+
 
 const heroReveals = document.querySelectorAll(
   ".reveal-left, .reveal-right"

@@ -1,0 +1,286 @@
+.wishlist-section{
+  width:100%;
+  padding:90px 8%;
+  background:#f5f9fc;
+  min-height:70vh;
+}
+
+.wishlist-heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 55px;
+}
+
+.wishlist-heading span{
+  display:inline-flex;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#e4f3fb;
+  color:#0a5c88;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.8px;
+  margin-bottom:16px;
+}
+
+.wishlist-heading h1{
+  font-size:44px;
+  color:#06192f;
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.wishlist-heading p{
+  color:#5d7387;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.wishlist-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;
+}
+
+.wishlist-card{
+  background:#fff;
+  border:1px solid #dbe9f2;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(10,61,98,.06);
+}
+
+.wishlist-img{
+  height:220px;
+  background:#eef7fc;
+}
+
+.wishlist-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.wishlist-body{
+  padding:22px;
+}
+
+.wishlist-body h3{
+  font-size:18px;
+  color:#06192f;
+  margin-bottom:10px;
+}
+
+.wishlist-price{
+  color:#0a5c88;
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.wishlist-actions{
+  display:flex;
+  gap:12px;
+}
+
+.wishlist-actions button{
+  flex:1;
+  border:none;
+  padding:13px;
+  border-radius:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.add-cart-btn{
+  background:#0a5c88;
+  color:#fff;
+}
+
+.remove-wish-btn{
+  background:#ffe9e9;
+  color:#c0392b;
+}
+
+.empty-wishlist{
+  grid-column:1/-1;
+  text-align:center;
+  background:#fff;
+  border:1px solid #dbe9f2;
+  border-radius:28px;
+  padding:70px 30px;
+}
+
+.empty-wishlist i{
+  font-size:60px;
+  color:#0a5c88;
+  margin-bottom:20px;
+}
+
+.empty-wishlist h2{
+  color:#06192f;
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.empty-wishlist p{
+  color:#5d7387;
+  margin-bottom:24px;
+}
+
+.empty-wishlist a{
+  display:inline-flex;
+  padding:14px 24px;
+  background:#0a5c88;
+  color:#fff;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:800;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================
+   MOBILE : < 640px
+==================================== */
+
+@media screen and (max-width:639px){
+
+.wishlist-section{
+    padding:60px 5%;
+}
+
+.wishlist-heading{
+    margin-bottom:35px;
+}
+
+.wishlist-heading h1{
+    font-size:32px;
+    line-height:1.25;
+}
+
+.wishlist-heading p{
+    font-size:15px;
+}
+
+.wishlist-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+}
+
+.wishlist-card{
+    border-radius:22px;
+}
+
+.wishlist-img{
+    height:220px;
+}
+
+.wishlist-img img{
+    object-fit:contain;
+    padding:10px;
+}
+
+.wishlist-body{
+    padding:18px;
+}
+
+.wishlist-body h3{
+    font-size:16px;
+}
+
+.wishlist-price{
+    font-size:18px;
+}
+
+.wishlist-actions{
+    flex-direction:column;
+}
+
+.wishlist-actions button{
+    width:100%;
+}
+
+.empty-wishlist{
+    padding:50px 22px;
+}
+
+.empty-wishlist h2{
+    font-size:26px;
+}
+
+}
+
+
+/* ====================================
+   TABLET : 640px - 1024px
+==================================== */
+
+@media screen and (min-width:640px) and (max-width:1024px){
+
+.wishlist-section{
+    padding:70px 6%;
+}
+
+.wishlist-heading h1{
+    font-size:38px;
+}
+
+.wishlist-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.wishlist-img{
+    height:230px;
+}
+
+}
+
+
+/* ====================================
+   DESKTOP : 1024px - 1280px
+==================================== */
+
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+.wishlist-section{
+    padding:80px 6%;
+}
+
+.wishlist-heading h1{
+    font-size:42px;
+}
+
+.wishlist-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+
+/* ====================================
+   LARGE : > 1280px
+==================================== */
+
+@media screen and (min-width:1281px){
+
+.wishlist-grid{
+    grid-template-columns:repeat(4,1fr);
+    max-width:1450px;
+    margin:auto;
+}
+
+.wishlist-heading h1{
+    font-size:46px;
+}
+
+}

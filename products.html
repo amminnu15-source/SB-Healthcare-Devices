@@ -1,0 +1,417 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SB HEALTHCARE DEVICES | SURGICAL LIFE CARE EQUIPMENTS</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ <link rel="stylesheet" href="./products.css">
+  <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+<body>
+
+
+
+  <header class="hs-navbar">
+
+
+  <div class="hs-top">
+    <a href="./signup.html">Become a seller</a>
+    <a href="./signup.html">Seller / Vendor Login</a>
+    <a href="./signup.html">Create Support Ticket</a>
+    <a href="./signup.html">Reward Program</a>
+    <div class="spacer"></div>
+
+  
+    <div class="top-dropdown-wrap">
+      <button class="currency-btn" onclick="toggleDrop('currency-drop')">
+        ₹ INR <i class="fa-solid fa-chevron-down" style="font-size:9px"></i>
+      </button>
+      <div id="currency-drop" class="top-dropdown">
+        <div class="dropdown-header">Select Currency</div>
+        <a href="#"><i class="fa-solid fa-indian-rupee-sign"></i> ₹ INR — Indian Rupee</a>
+        <a href="#"><i class="fa-solid fa-dollar-sign"></i> $ USD — US Dollar</a>
+        <a href="#"><i class="fa-solid fa-euro-sign"></i> € EUR — Euro</a>
+        <a href="#"><i class="fa-solid fa-sterling-sign"></i> £ GBP — British Pound</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hs-main">
+
+   
+    <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+
+
+<a href="index.html" class="logo sb-logo">
+  <img src="./images/logo.jpeg" alt="SB Healthcare Devices Logo">
+</a>
+
+   
+  <!-- NAV LINKS -->
+
+<nav class="hs-nav-links">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="products.html" class="active">Products</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+   
+   <!-- SEARCH -->
+<!-- SEARCH BAR -->
+<form class="search-box" onsubmit="searchProducts(event)">
+  <input 
+    type="text"
+    id="searchInput"
+    placeholder="Search medicines, devices, equipment..."
+    autocomplete="off"
+  >
+
+  <button type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+
+  <div class="search-suggestions" id="searchSuggestions"></div>
+</form>
+
+    
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-sidebar" id="mobileSidebar">
+
+  <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="./about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+  <a href="./services.html"><i class="fa-solid fa-briefcase-medical"></i> Services</a>
+  <a href="./products.html"><i class="fa-solid fa-box"></i> Products</a>
+  <a href="./contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+  <a href="./wishlist.html">
+    <i class="fa-regular fa-heart"></i>
+    Wishlist
+    <small id="wishlistCount">0</small>
+  </a>
+
+  <a href="./Cart.html">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Cart
+  </a>
+
+  <a href="./login.html">
+    <i class="fa-solid fa-right-to-bracket"></i>
+    Login
+  </a>
+
+  <a href="./signup.html">
+    <i class="fa-solid fa-user-plus"></i>
+    Create Account
+  </a>
+
+</div>
+
+
+<div class="dropdown-wrap">
+
+  <button class="phone-btn" onclick="toggleDrop('phone-drop')">
+    <i class="fa-solid fa-phone-volume"></i>
+
+    <span>9533492218</span>
+
+    <i class="fa-solid fa-chevron-down" style="font-size:10px"></i>
+  </button>
+
+  <div id="phone-drop" class="dropdown right">
+
+    <div class="dropdown-header">Contact Us</div>
+
+   
+    <a href="tel:+9533492218">
+      <i class="fa-solid fa-phone"></i>
+      +91 9533492218
+    </a>
+
+  
+
+    <hr>
+
+
+    <a href="mailto:sbhealthcaredevices@gmail.com">
+      <i class="fa-regular fa-envelope"></i>
+      sbhealthcaredevices@gmail.com
+    </a>
+
+   
+    <a href="https://wa.me/919533492218" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      WhatsApp Support
+    </a>
+
+    <hr>
+
+    
+    <a href="https://www.google.com/maps/search/?api=1&query=H.No.+47-5-1244%2F1+Kannemula+Ganathi+Colony+Near+Mulugu+Road+Hanumakonda+Telangana+506001"
+      target="_blank">
+
+      <i class="fa-solid fa-location-dot"></i>
+
+      Kannemula Ganathi Colony,
+Near Mulugu Road, Hanumakonda
+    </a>
+
+    
+    <a href="#">
+      <i class="fa-regular fa-clock"></i>
+      Mon–Sat, 9am – 6pm
+    </a>
+
+  </div>
+
+</div>
+
+    
+    <a href="./products.html" class="icon-link" title="Analytics"><i class="fa-solid fa-chart-simple"></i></a>
+
+
+    <a href="./wishlist.html" class="wishlist-btn" title="Wishlist">
+  <i class="fa-regular fa-heart"></i>
+  <small id="wishlistCount">0</small>
+</a>
+
+   
+    <div class="dropdown-wrap">
+      <button class="account-btn" onclick="toggleDrop('account-drop')">
+        <i class="fa-regular fa-circle-user" style="font-size:16px"></i>
+        <span>Account</span>
+        <i class="fa-solid fa-chevron-down" style="font-size:10px"></i>
+      </button>
+      <div id="account-drop" class="dropdown right">
+        <div class="dropdown-header">My Account</div>
+        <a href="./User Profile.html"><i class="fa-regular fa-circle-user"></i> My Profile</a>
+        <a href="./Thank You Page.html"><i class="fa-solid fa-box"></i> My Orders</a>
+        <a href="./wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        <a href="./Cart.html"><i class="fa-solid fa-tag"></i> My Coupons</a>
+        <a href="./Cart.html"><i class="fa-solid fa-star"></i> Rewards</a>
+        <hr>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+		  <a href="./login.html">
+    <i class="fa-solid fa-right-to-bracket"></i>
+    Login
+  </a>
+
+
+  <a href="./signup.html">
+    <i class="fa-solid fa-user-plus"></i>
+    Create Account
+  </a>
+      </div>
+    </div>
+
+  <a href="./Cart.html" class="cart-btn">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span>Cart</span>
+  <small id="cartCount">0</small>
+</a>
+
+  </div>
+
+
+
+</header>
+
+<section class="products-hero">
+  <div class="products-hero-overlay"></div>
+
+  <div class="products-hero-content">
+    <span class="hero-badge">Medical Equipment Store</span>
+
+    <h1>Shop Trusted Healthcare Devices Online</h1>
+
+    <p>
+      Find genuine oxygen concentrators, CPAP machines, wheelchairs, nebulizers,
+      and home healthcare equipment at affordable prices.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#productsGrid" class="hero-btn primary">Explore Products</a>
+      <a href="contact.html" class="hero-btn secondary">Get Expert Help</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="products-section">
+
+  <aside class="products-sidebar">
+    <div class="sidebar-title">
+      <i class="fa-solid fa-sliders"></i>
+      <span>All Categories</span>
+    </div>
+
+    <div class="category-list" id="categoryList"></div>
+  </aside>
+
+  <main class="products-main">
+
+    <div class="products-top">
+      <div>
+        <h2 id="categoryTitle">Oxygen Concentrator</h2>
+        <p id="productCount">Showing 20 products</p>
+      </div>
+
+      <div class="product-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="productSearch" placeholder="Search products...">
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="category-content" id="categoryContent"></div>
+
+  </main>
+
+</section>
+
+
+<section class="products-cta">
+
+  <div class="products-cta-overlay"></div>
+
+  <div class="products-cta-content">
+
+    <span class="cta-tag">
+      Trusted Healthcare Support
+    </span>
+
+    <h2>
+      Need Help Choosing the Right Medical Equipment?
+    </h2>
+
+    <p>
+      Our healthcare experts are here to help you select the best oxygen concentrators,
+      CPAP machines, wheelchairs, respiratory devices, and homecare equipment
+      based on your needs and budget.
+    </p>
+
+    <div class="cta-buttons">
+
+      <a href="tel:+919533492218" class="cta-btn primary">
+        <i class="fa-solid fa-phone-volume"></i>
+        Call Now
+      </a>
+
+      <a href="https://wa.me/919533492218" target="_blank" class="cta-btn secondary">
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp Support
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="sb-footer">
+  <div class="sb-footer-container">
+
+    <div class="sb-footer-about">
+      <a href="index.html" class="sb-footer-logo">
+        <img src="images/logo.jpeg" alt="SB Healthcare Devices Logo">
+      </a>
+
+      <p>
+        SB Healthcare Devices provides genuine medical and home healthcare
+        equipment from trusted brands at affordable prices.
+      </p>
+
+      <div class="sb-footer-socials">
+        <a href="https://www.facebook.com/people/Sb-Healthcare-Devices/pfbid02QiPxxEHg7bE7eeDnpVSiEA81E8aiddRvGdP8a3XfciqWyJMZt9fQB9EQPdjXc5rRl/?mibextid=wwXIfr&rdid=1eag7KyMwYZPtuJj&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BhVphG32P%2F%3Fmibextid%3DwwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Quick Links</h3>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./services.html">Services</a>
+      <a href="./products.html">Products</a>
+      <a href="./checkout.html">Contact Us</a>
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Top Categories</h3>
+      <a href="./products.html">Oxygen Concentrator</a>
+      <a href="./products.html">BiPAP Machine</a>
+      <a href="./products.html">CPAP Machine</a>
+      <a href="./products.html">Nebulizer Machine</a>
+      <a href="./products.html">Wheelchair</a>
+ 
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Contact Us</h3>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98715 08509</span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>sbhealthcaredevices@gmail.com</span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>
+          Kannemula Ganathi Colony, Near Mulugu Road,
+          Hanumakonda, Telangana - 506001
+        </span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-regular fa-clock"></i>
+        <span>Mon - Sat : 9:00 AM - 6:00 PM</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sb-footer-bottom">
+    <p>© 2026 SB Healthcare Devices. All Rights Reserved.</p>
+
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Shipping Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="./nav.js"></script>
+<script src="./products.js"></script>
+<script src="./footer.js"></script>
+
+</body>
+</html>

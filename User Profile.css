@@ -1,0 +1,351 @@
+.account-section{
+  width:100%;
+  padding:90px 8%;
+  background:#f5f9fc;
+  min-height:80vh;
+}
+
+.account-heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 55px;
+}
+
+.account-heading span{
+  display:inline-flex;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#e4f3fb;
+  color:#0a5c88;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.8px;
+  margin-bottom:16px;
+}
+
+.account-heading h1{
+  color:#06192f;
+  font-size:44px;
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.account-heading p{
+  color:#5d7387;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.account-layout{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:34px;
+}
+
+.account-sidebar{
+  background:#ffffff;
+  border:1px solid #dbe9f2;
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 14px 35px rgba(10,61,98,.06);
+  height:max-content;
+}
+
+.account-user{
+  text-align:center;
+  padding-bottom:24px;
+  border-bottom:1px solid #e5eef6;
+  margin-bottom:22px;
+}
+
+.account-avatar{
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  background:#0a5c88;
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  font-weight:900;
+  margin:0 auto 16px;
+}
+
+.account-user h3{
+  color:#06192f;
+  font-size:20px;
+  margin-bottom:6px;
+}
+
+.account-user p{
+  color:#5d7387;
+  font-size:14px;
+  word-break:break-word;
+}
+
+.account-tab,
+.logout-btn{
+  width:100%;
+  border:none;
+  border-radius:14px;
+  padding:14px 16px;
+  margin-bottom:12px;
+  text-align:left;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.account-tab{
+  background:#f5f9fc;
+  color:#0a3d62;
+}
+
+.account-tab.active{
+  background:#0a5c88;
+  color:#ffffff;
+}
+
+.logout-btn{
+  background:#ffe9e9;
+  color:#c0392b;
+}
+
+.account-content{
+  background:#ffffff;
+  border:1px solid #dbe9f2;
+  border-radius:28px;
+  padding:34px;
+  box-shadow:0 14px 35px rgba(10,61,98,.06);
+}
+
+.account-panel{
+  display:none;
+}
+
+.account-panel.active{
+  display:block;
+}
+
+.account-panel h2{
+  color:#06192f;
+  font-size:30px;
+  font-weight:900;
+  margin-bottom:28px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.form-group{
+  margin-bottom:22px;
+}
+
+.form-group label{
+  display:block;
+  color:#06192f;
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  height:50px;
+  border:1px solid #d2e2ec;
+  border-radius:14px;
+  padding:0 16px;
+  outline:none;
+  font-size:15px;
+  color:#06192f;
+  background:#f9fcfe;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+  border-color:#0a5c88;
+  background:#ffffff;
+}
+
+.save-btn{
+  border:none;
+  border-radius:15px;
+  padding:15px 28px;
+  background:#0a5c88;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:900;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.save-btn:hover{
+  background:#064b75;
+  transform:translateY(-3px);
+}
+
+@media(max-width:992px){
+  .account-layout{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+  .account-section{
+    padding:65px 5%;
+  }
+
+  .account-heading h1{
+    font-size:34px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .account-content,
+  .account-sidebar{
+    padding:24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ====================================
+   MOBILE : < 640px
+==================================== */
+
+@media screen and (max-width:639px){
+
+.account-section{
+    padding:60px 5%;
+}
+
+.account-heading{
+    margin-bottom:35px;
+}
+
+.account-heading h1{
+    font-size:32px;
+    line-height:1.25;
+}
+
+.account-heading p{
+    font-size:15px;
+}
+
+.account-layout{
+    grid-template-columns:1fr;
+    gap:24px;
+}
+
+.account-sidebar,
+.account-content{
+    padding:22px;
+    border-radius:22px;
+}
+
+.account-avatar{
+    width:72px;
+    height:72px;
+    font-size:30px;
+}
+
+.account-panel h2{
+    font-size:26px;
+}
+
+.form-grid{
+    grid-template-columns:1fr;
+    gap:0;
+}
+
+.save-btn{
+    width:100%;
+}
+
+}
+
+
+/* ====================================
+   TABLET : 640px - 1024px
+==================================== */
+
+@media screen and (min-width:640px) and (max-width:1024px){
+
+.account-section{
+    padding:70px 6%;
+}
+
+.account-heading h1{
+    font-size:38px;
+}
+
+.account-layout{
+    grid-template-columns:1fr;
+    gap:28px;
+}
+
+.account-sidebar,
+.account-content{
+    padding:28px;
+}
+
+.form-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/* ====================================
+   DESKTOP : 1024px - 1280px
+==================================== */
+
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+.account-section{
+    padding:80px 6%;
+}
+
+.account-layout{
+    grid-template-columns:280px 1fr;
+    gap:28px;
+}
+
+.account-heading h1{
+    font-size:42px;
+}
+
+}
+
+
+/* ====================================
+   LARGE : > 1280px
+==================================== */
+
+@media screen and (min-width:1281px){
+
+.account-layout{
+    max-width:1450px;
+    margin:auto;
+    grid-template-columns:300px 1fr;
+}
+
+.account-heading h1{
+    font-size:46px;
+}
+
+}

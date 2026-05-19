@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SB HEALTHCARE DEVICES | SURGICAL LIFE CARE EQUIPMENTS</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ <link rel="stylesheet" href="./Search Results.css">
+  <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+<body>
+
+
+
+    <header class="hs-navbar">
+
+
+  <div class="hs-top">
+    <a href="./signup.html">Become a seller</a>
+    <a href="./signup.html">Seller / Vendor Login</a>
+    <a href="./signup.html">Create Support Ticket</a>
+    <a href="./signup.html">Reward Program</a>
+    <div class="spacer"></div>
+
+  
+    <div class="top-dropdown-wrap">
+      <button class="currency-btn" onclick="toggleDrop('currency-drop')">
+        ₹ INR <i class="fa-solid fa-chevron-down" style="font-size:9px"></i>
+      </button>
+      <div id="currency-drop" class="top-dropdown">
+        <div class="dropdown-header">Select Currency</div>
+        <a href="#"><i class="fa-solid fa-indian-rupee-sign"></i> ₹ INR — Indian Rupee</a>
+        <a href="#"><i class="fa-solid fa-dollar-sign"></i> $ USD — US Dollar</a>
+        <a href="#"><i class="fa-solid fa-euro-sign"></i> € EUR — Euro</a>
+        <a href="#"><i class="fa-solid fa-sterling-sign"></i> £ GBP — British Pound</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hs-main">
+
+   
+    <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+
+
+<a href="index.html" class="logo sb-logo">
+  <img src="./images/logo.jpeg" alt="SB Healthcare Devices Logo">
+</a>
+
+   
+  <!-- NAV LINKS -->
+
+<nav class="hs-nav-links">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+   
+   <!-- SEARCH -->
+<!-- SEARCH BAR -->
+<form class="search-box" onsubmit="searchProducts(event)">
+  <input 
+    type="text"
+    id="searchInput"
+    placeholder="Search medicines, devices, equipment..."
+    autocomplete="off"
+  >
+
+  <button type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+
+  <div class="search-suggestions" id="searchSuggestions"></div>
+</form>
+
+    
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-sidebar" id="mobileSidebar">
+
+  <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="./about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+  <a href="./services.html"><i class="fa-solid fa-briefcase-medical"></i> Services</a>
+  <a href="./products.html"><i class="fa-solid fa-box"></i> Products</a>
+  <a href="./contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+  <a href="./wishlist.html">
+    <i class="fa-regular fa-heart"></i>
+    Wishlist
+    <small id="wishlistCount">0</small>
+  </a>
+
+  <a href="./Cart.html">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Cart
+  </a>
+
+  <a href="./login.html">
+    <i class="fa-solid fa-right-to-bracket"></i>
+    Login
+  </a>
+
+  <a href="./signup.html">
+    <i class="fa-solid fa-user-plus"></i>
+    Create Account
+  </a>
+
+</div>
+
+
+<div class="dropdown-wrap">
+
+  <button class="phone-btn" onclick="toggleDrop('phone-drop')">
+    <i class="fa-solid fa-phone-volume"></i>
+
+    <span>9533492218</span>
+
+    <i class="fa-solid fa-chevron-down" style="font-size:10px"></i>
+  </button>
+
+  <div id="phone-drop" class="dropdown right">
+
+    <div class="dropdown-header">Contact Us</div>
+
+   
+    <a href="tel:+9533492218">
+      <i class="fa-solid fa-phone"></i>
+      +91 9533492218
+    </a>
+
+  
+
+    <hr>
+
+
+    <a href="mailto:sbhealthcaredevices@gmail.com">
+      <i class="fa-regular fa-envelope"></i>
+      sbhealthcaredevices@gmail.com
+    </a>
+
+   
+    <a href="https://wa.me/919533492218" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      WhatsApp Support
+    </a>
+
+    <hr>
+
+    
+    <a href="https://www.google.com/maps/search/?api=1&query=H.No.+47-5-1244%2F1+Kannemula+Ganathi+Colony+Near+Mulugu+Road+Hanumakonda+Telangana+506001"
+      target="_blank">
+
+      <i class="fa-solid fa-location-dot"></i>
+
+      Kannemula Ganathi Colony,
+Near Mulugu Road, Hanumakonda
+    </a>
+
+    
+    <a href="#">
+      <i class="fa-regular fa-clock"></i>
+      Mon–Sat, 9am – 6pm
+    </a>
+
+  </div>
+
+</div>
+
+    
+    <a href="./products.html" class="icon-link" title="Analytics"><i class="fa-solid fa-chart-simple"></i></a>
+
+
+    <a href="./wishlist.html" class="wishlist-btn" title="Wishlist">
+  <i class="fa-regular fa-heart"></i>
+  <small id="wishlistCount">0</small>
+</a>
+
+   
+    <div class="dropdown-wrap">
+      <button class="account-btn" onclick="toggleDrop('account-drop')">
+        <i class="fa-regular fa-circle-user" style="font-size:16px"></i>
+        <span>Account</span>
+        <i class="fa-solid fa-chevron-down" style="font-size:10px"></i>
+      </button>
+      <div id="account-drop" class="dropdown right">
+        <div class="dropdown-header">My Account</div>
+        <a href="./User Profile.html"><i class="fa-regular fa-circle-user"></i> My Profile</a>
+        <a href="./Thank You Page.html"><i class="fa-solid fa-box"></i> My Orders</a>
+        <a href="./wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        <a href="./Cart.html"><i class="fa-solid fa-tag"></i> My Coupons</a>
+        <a href="./Cart.html"><i class="fa-solid fa-star"></i> Rewards</a>
+        <hr>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+		  <a href="./login.html">
+    <i class="fa-solid fa-right-to-bracket"></i>
+    Login
+  </a>
+
+
+  <a href="./signup.html">
+    <i class="fa-solid fa-user-plus"></i>
+    Create Account
+  </a>
+      </div>
+    </div>
+
+  <a href="./Cart.html" class="cart-btn">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span>Cart</span>
+  <small id="cartCount">0</small>
+</a>
+
+  </div>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+<section class="search-results-section">
+
+  <div class="search-results-heading">
+    <span>SEARCH RESULTS</span>
+    <h1>Find Healthcare Products</h1>
+    <p>Search medical devices, equipment, and healthcare products.</p>
+  </div>
+
+  <div class="search-results-box">
+    <input type="text" id="resultsSearchInput" placeholder="Search products...">
+    <button id="resultsSearchBtn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      Search
+    </button>
+  </div>
+
+  <p class="results-count" id="resultsCount"></p>
+
+  <div class="search-results-grid" id="searchResultsGrid"></div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="sb-footer">
+  <div class="sb-footer-container">
+
+    <div class="sb-footer-about">
+      <a href="index.html" class="sb-footer-logo">
+        <img src="images/logo.jpeg" alt="SB Healthcare Devices Logo">
+      </a>
+
+      <p>
+        SB Healthcare Devices provides genuine medical and home healthcare
+        equipment from trusted brands at affordable prices.
+      </p>
+
+      <div class="sb-footer-socials">
+        <a href="https://www.facebook.com/people/Sb-Healthcare-Devices/pfbid02QiPxxEHg7bE7eeDnpVSiEA81E8aiddRvGdP8a3XfciqWyJMZt9fQB9EQPdjXc5rRl/?mibextid=wwXIfr&rdid=1eag7KyMwYZPtuJj&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BhVphG32P%2F%3Fmibextid%3DwwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Quick Links</h3>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./services.html">Services</a>
+      <a href="./products.html">Products</a>
+      <a href="./checkout.html">Contact Us</a>
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Top Categories</h3>
+      <a href="./products.html">Oxygen Concentrator</a>
+      <a href="./products.html">BiPAP Machine</a>
+      <a href="./products.html">CPAP Machine</a>
+      <a href="./products.html">Nebulizer Machine</a>
+      <a href="./products.html">Wheelchair</a>
+ 
+    </div>
+
+    <div class="sb-footer-col">
+      <h3>Contact Us</h3>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98715 08509</span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>sbhealthcaredevices@gmail.com</span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>
+          Kannemula Ganathi Colony, Near Mulugu Road,
+          Hanumakonda, Telangana - 506001
+        </span>
+      </div>
+
+      <div class="sb-contact-item">
+        <i class="fa-regular fa-clock"></i>
+        <span>Mon - Sat : 9:00 AM - 6:00 PM</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sb-footer-bottom">
+    <p>© 2026 SB Healthcare Devices. All Rights Reserved.</p>
+
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Shipping Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="./nav.js"></script>
+
+<script src="./footer.js"></script>
+<script>
+const searchProductsData = [
+  "Oxygen Concentrator","BiPAP Machine & BiPAP Ventilator","CPAP Machine",
+  "Nebulizer Machine","Hearing Aid","Wheelchair","Breast Feeding Pump",
+  "Sleep Test Machine","Insulin Pump","Stair Climbing Wheelchair",
+  "Commode Chair","Crutches","Feno Test Machine","Air Purifier",
+  "Cough Assist Machine","BiPAP & CPAP Machine","Health & Personal Care",
+  "Fitness Equipment","Step Counter/Pedometer","Massager","Body Care",
+  "Mobile Aid","Oxygen Concentrator Accessories","Walking Sticks",
+  "Walker for Adults","Skin Tag Remover","Support-Braces & Splints",
+  "Bath/Shower Chair","CPAP BiPAP Mask & Accessories",
+  "Physiotherapy & Rehabilitation","Respiratory Mask","Steam Vaporizer",
+  "Ankle & Foot Supports","Arm Support","Back Support","Body Belts",
+  "Hip Support","Shoulder Support","Waist & Abdomen Supports","Splints",
+  "Homecare Equipments","Nebulizer Kit","Spirometer- Incentive Spirometer",
+  "Oxygen Analyzer","Peak Flow Meter","Polysomnography Machine",
+  "Oxygen Cylinder","Body Plethysmograph","Oscillometry Device",
+  "Breath Analyser Machine"
+];
+
+const categoryImageName = {
+  "Oxygen Concentrator": "Oxygen Concentrator",
+  "BiPAP Machine & BiPAP Ventilator": "BiPAP Machine",
+  "CPAP Machine": "CPAP Machine",
+  "Nebulizer Machine": "Nebulizer Machine",
+  "Hearing Aid": "Hearing Aid",
+  "Wheelchair": "Wheelchair",
+  "Breast Feeding Pump": "Breast Feeding Pump",
+  "Sleep Test Machine": "Sleep Test Machine",
+  "Insulin Pump": "Insulin Pump",
+  "Stair Climbing Wheelchair": "Stair Climbing Wheelchair",
+  "Commode Chair": "Commode Chair",
+  "Crutches": "Crutches",
+  "Feno Test Machine": "Feno Test Machine",
+  "Air Purifier": "Air Purifier",
+  "Cough Assist Machine": "Cough Assist Machine",
+  "BiPAP & CPAP Machine": "BiPAP & CPAP Machine",
+  "Health & Personal Care": "Health & Personal Care",
+  "Fitness Equipment": "Fitness Equipment",
+  "Step Counter/Pedometer": "Step Counter",
+  "Massager": "Massager",
+  "Body Care": "Body Care",
+  "Mobile Aid": "Mobile Aid",
+  "Oxygen Concentrator Accessories": "Oxygen Concentrator Accessories",
+  "Walking Sticks": "Walking Sticks",
+  "Walker for Adults": "Walker for Adults",
+  "Skin Tag Remover": "Skin Tag Remover",
+  "Support-Braces & Splints": "Support-Braces & Splints",
+  "Bath/Shower Chair": "Bath Shower Chair",
+  "CPAP BiPAP Mask & Accessories": "CPAP BiPAP Mask & Accessories",
+  "Physiotherapy & Rehabilitation": "Physiotherapy & Rehabilitation",
+  "Respiratory Mask": "Respiratory Mask",
+  "Steam Vaporizer": "Steam Vaporizer",
+  "Ankle & Foot Supports": "Ankle & Foot Supports",
+  "Arm Support": "Arm Support",
+  "Back Support": "Back Support",
+  "Body Belts": "Body Belts",
+  "Hip Support": "Hip Support",
+  "Shoulder Support": "Shoulder Support",
+  "Waist & Abdomen Supports": "Waist & Abdomen Supports",
+  "Splints": "Splints",
+  "Homecare Equipments": "Homecare Equipments",
+  "Nebulizer Kit": "Nebulizer Kit",
+  "Spirometer- Incentive Spirometer": "Spirometer",
+  "Oxygen Analyzer": "Oxygen Analyzer",
+  "Peak Flow Meter": "Peak Flow Meter",
+  "Polysomnography Machine": "Polysomnography Machine",
+  "Oxygen Cylinder": "Oxygen Cylinder",
+  "Body Plethysmograph": "Body Plethysmograph",
+  "Oscillometry Device": "Oscillometry Device",
+  "Breath Analyser Machine": "Breath Analyser Machine"
+};
+
+const searchBrands = ["Philips","ResMed","BPL Medical","Omron","Nidek","Dr Morepen"];
+
+
+
+const searchProductImages = {
+
+"Oxygen Concentrator":[
+"images/Oxygen Concentrator-1.jpg",
+"images/Oxygen Concentrator-2.jpg",
+"images/Oxygen Concentrator-3.jpg",
+"images/Oxygen Concentrator-4.jpg",
+"images/Oxygen Concentrator-5.jpg",
+"images/Oxygen Concentrator-6.jpg",
+"images/Oxygen Concentrator-7.jpg",
+"images/Oxygen Concentrator-8.jpg"
+],
+
+"BiPAP Machine & BiPAP Ventilator":[
+"images/BiPAP Machine & BiPAP Ventilator-1.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-2.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-3.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-4.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-5.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-6.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-7.jpg",
+"images/BiPAP Machine & BiPAP Ventilator-8.jpg"
+],
+
+"CPAP Machine":[
+"images/CPAP Machine-1.jpg",
+"images/CPAP Machine-2.jpg",
+"images/CPAP Machine-3.jpg",
+"images/CPAP Machine-4.jpg",
+"images/CPAP Machine-5.jpg",
+"images/CPAP Machine-6.jpg",
+"images/CPAP Machine-7.jpg",
+"images/CPAP Machine-8.jpg"
+],
+
+"Nebulizer Machine":[
+"images/Nebulizer Machine-1.jpg",
+"images/Nebulizer Machine-2.jpg",
+"images/Nebulizer Machine-3.jpg",
+"images/Nebulizer Machine-4.jpg",
+"images/Nebulizer Machine-5.jpg",
+"images/Nebulizer Machine-6.jpg",
+"images/Nebulizer Machine-7.jpg",
+"images/Nebulizer Machine-8.jpg"
+],
+
+
+"Spirometer- Incentive Spirometer":[
+"images/Spirometer- Incentive Spirometer-1.jpg",
+"images/Spirometer- Incentive Spirometer-2.jpg",
+"images/Spirometer- Incentive Spirometer-3.jpg",
+"images/Spirometer- Incentive Spirometer-4.jpg",
+"images/Spirometer- Incentive Spirometer-5.jpg",
+"images/Spirometer- Incentive Spirometer-6.jpg",
+"images/Spirometer- Incentive Spirometer-7.jpg",
+"images/Spirometer- Incentive Spirometer-8.jpg"
+],
+
+"Bath/Shower Chair":[
+"images/Bath-Shower Chair-1.jpg",
+"images/Bath-Shower Chair-2.jpg",
+"images/Bath-Shower Chair-3.jpg",
+"images/Bath-Shower Chair-4.jpg",
+"images/Bath-Shower Chair-5.jpg",
+"images/Bath-Shower Chair-6.jpg",
+"images/Bath-Shower Chair-7.jpg",
+"images/Bath-Shower Chair-8.jpg"
+],
+
+"Step Counter/Pedometer":[
+"images/Step Counter-Pedometer-1.jpg",
+"images/Step Counter-Pedometer-2.jpg",
+"images/Step Counter-Pedometer-3.jpg",
+"images/Step Counter-Pedometer-4.jpg",
+"images/Step Counter-Pedometer-5.jpg",
+"images/Step Counter-Pedometer-6.jpg",
+"images/Step Counter-Pedometer-7.jpg",
+"images/Step Counter-Pedometer-8.jpg"
+],
+
+
+};
+
+
+
+const FALLBACK_IMAGE = "https://placehold.co/400x220/eef7fc/0a5c88?text=No+Image";
+
+let searchAllProducts = [];
+
+searchProductsData.forEach((category, catIndex) => {
+  for(let i = 1; i <= 8; i++){
+    const brand = searchBrands[(i + catIndex) % searchBrands.length];
+    const imgName = categoryImageName[category] || category;
+
+const images = searchProductImages[category] || [];
+
+    searchAllProducts.push({
+      id: `search-${catIndex + 1}-${i}`,
+      category,
+      brand,
+      name: `${brand} ${category} Model ${i}`,
+      price: 12000 + (i * 1300) + (catIndex * 250),
+     image: images[i-1] || `images/${imgName}-${i}.jpg`
+    });
+  }
+});
+
+const productMap = {};
+searchAllProducts.forEach(p => { productMap[p.id] = p; });
+
+const resultsSearchInput = document.getElementById("resultsSearchInput");
+const resultsSearchBtn  = document.getElementById("resultsSearchBtn");
+const searchResultsGrid = document.getElementById("searchResultsGrid");
+const resultsCount      = document.getElementById("resultsCount");
+
+function getQueryFromURL(){
+  const params = new URLSearchParams(window.location.search);
+  return params.get("q") || "";
+}
+
+function getCart(){
+  try {
+    const stored = localStorage.getItem("cart");
+    return stored ? JSON.parse(stored) : [];
+  } catch(e) {
+    localStorage.removeItem("cart");
+    return [];
+  }
+}
+
+function getWishlist(){
+  try {
+    const stored = localStorage.getItem("wishlist");
+    return stored ? JSON.parse(stored) : [];
+  } catch(e) {
+    localStorage.removeItem("wishlist");
+    return [];
+  }
+}
+
+function updateCartBadge(cart){
+  const total = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  document.querySelectorAll("#cartCount").forEach(el => el.textContent = total);
+}
+
+function updateWishlistBadge(wishlist){
+  document.querySelectorAll("#wishlistCount").forEach(el => el.textContent = wishlist.length);
+}
+
+function showToast(message){
+  let toast = document.getElementById("sb-toast");
+  if(!toast){
+    toast = document.createElement("div");
+    toast.id = "sb-toast";
+    toast.style.cssText = `
+      position:fixed;bottom:30px;left:50%;transform:translateX(-50%);
+      background:#0a5c88;color:#fff;padding:14px 28px;
+      border-radius:50px;font-weight:700;font-size:15px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:99999;
+      transition:opacity .3s ease;opacity:0;
+    `;
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.style.opacity = "1";
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => { toast.style.opacity = "0"; }, 2500);
+}
+
+function addSearchToCart(product){
+  let cart = getCart();
+
+  const existing = cart.find(item => item.id === product.id);
+  if(existing){
+    existing.quantity = (existing.quantity || 1) + 1;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartBadge(cart);
+  showToast("✓ Added to cart!");
+}
+
+function toggleSearchWishlist(product){
+  let wishlist = getWishlist();
+  const exists = wishlist.find(item => item.id === product.id);
+
+  if(exists){
+    wishlist = wishlist.filter(item => item.id !== product.id);
+    showToast("Removed from wishlist");
+  } else {
+    wishlist.push(product);
+    showToast("♥ Added to wishlist!");
+  }
+
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  updateWishlistBadge(wishlist);
+  renderSearchResults(resultsSearchInput.value);
+}
+
+function renderSearchResults(keyword){
+  const value = keyword.toLowerCase().trim();
+  resultsSearchInput.value = keyword;
+
+  const filtered = searchAllProducts.filter(product =>
+    product.name.toLowerCase().includes(value) ||
+    product.category.toLowerCase().includes(value) ||
+    product.brand.toLowerCase().includes(value)
+  );
+
+  resultsCount.textContent = value
+    ? `Showing ${filtered.length} results for "${keyword}"`
+    : `Showing all ${filtered.length} products`;
+
+  if(filtered.length === 0){
+    searchResultsGrid.innerHTML = `
+      <div class="empty-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <h2>No Products Found</h2>
+        <p>Try searching for oxygen concentrator, CPAP machine, wheelchair, or nebulizer.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const wishlist = getWishlist();
+
+  searchResultsGrid.innerHTML = filtered.map(product => {
+    const isFav = wishlist.some(item => item.id === product.id);
+    return `
+      <div class="search-card">
+        <div class="search-img">
+          <button class="search-fav" data-id="${product.id}">
+            <i class="${isFav ? "fa-solid" : "fa-regular"} fa-heart"></i>
+          </button>
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"
+          >
+        </div>
+        <div class="search-body">
+          <div class="search-brand">${product.brand}</div>
+          <h3>${product.name}</h3>
+          <div class="search-price">₹${product.price.toLocaleString("en-IN")}</div>
+          <button class="search-add-cart" data-id="${product.id}">Add to Cart</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  searchResultsGrid.querySelectorAll(".search-add-cart").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const product = productMap[btn.dataset.id];
+      if(product) addSearchToCart(product);
+    });
+  });
+
+  searchResultsGrid.querySelectorAll(".search-fav").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const product = productMap[btn.dataset.id];
+      if(product) toggleSearchWishlist(product);
+    });
+  });
+
+  updateCartBadge(getCart());
+  updateWishlistBadge(getWishlist());
+}
+
+resultsSearchBtn.addEventListener("click", () => renderSearchResults(resultsSearchInput.value));
+resultsSearchInput.addEventListener("keypress", e => {
+  if(e.key === "Enter") renderSearchResults(resultsSearchInput.value);
+});
+
+getCart();
+getWishlist();
+
+renderSearchResults(getQueryFromURL());
+</script>
+
+
+
+
+
+</body>
+</html>

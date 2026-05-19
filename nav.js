@@ -124,32 +124,11 @@ searchInput.addEventListener("keyup", function(){
 function searchProducts(event){
   event.preventDefault();
 
-  const value = searchInput.value.toLowerCase().trim();
+  const value = document.getElementById("searchInput").value.trim();
 
-  const found = products.find(product =>
-    product.name.toLowerCase() === value
-  );
-
-  if(found){
-    window.location.href = found.page;
-  }else{
-    document.body.innerHTML = `
-      <div class="search-not-found">
-        <div class="search-breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <span>Search results</span>
-        </div>
-
-        <div class="search-line"></div>
-
-        <h2>Search results</h2>
-
-        <div class="not-found-box">
-          <p>No products found matching the search criteria</p>
-        </div>
-      </div>
-    `;
+  if(value !== ""){
+    window.location.href =
+      `search-results.html?q=${encodeURIComponent(value)}`;
   }
 }
 
@@ -224,3 +203,21 @@ function updateCartCount(){
 }
 
 document.addEventListener("DOMContentLoaded", updateCartCount);
+
+
+
+
+function getWishlist(){
+  return JSON.parse(localStorage.getItem("wishlist")) || [];
+}
+
+function updateWishlistCount(){
+  const wishlistCount = document.getElementById("wishlistCount");
+  const wishlist = getWishlist();
+
+  if(wishlistCount){
+    wishlistCount.textContent = wishlist.length;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", updateWishlistCount);

@@ -1,4 +1,4 @@
-/* HERO SECTION */
+
 
 .about-hero{
   position:relative;
@@ -35,7 +35,7 @@
   align-items:center;
 }
 
-/* LEFT */
+
 
 .about-hero-content{
   max-width:600px;
@@ -74,7 +74,7 @@
   margin-bottom:26px;
 }
 
-/* BUTTONS */
+
 
 .about-hero-btns{
   display:flex;
@@ -132,7 +132,7 @@
   box-shadow:0 25px 60px rgba(10,61,98,0.14);
 }
 
-/* FLOATING CARD */
+
 
 .hero-floating-card{
   position:absolute;
@@ -189,7 +189,7 @@
   transform:translateX(0);
 }
 
-/* TABLET */
+
 
 @media(max-width:1024px){
   .about-hero{
@@ -211,7 +211,7 @@
   }
 }
 
-/* MOBILE */
+
 
 @media(max-width:768px){
   .about-hero{
@@ -251,7 +251,7 @@
 
 
 
-/* HERO STATS */
+
 
 .hero-stats{
   display:flex;
@@ -309,7 +309,7 @@
   line-height:1.5;
 }
 
-/* MOBILE */
+
 
 @media(max-width:768px){
 
@@ -853,7 +853,7 @@
 
 }
 
-/* MOBILE */
+
 
 @media(max-width:768px){
 
@@ -1121,7 +1121,7 @@
   margin-top:4px;
 }
 
-/* RIGHT CARDS */
+
 
 .solutions-right{
   display:grid;
@@ -1210,7 +1210,7 @@
   transform:rotateY(180deg);
 }
 
-/* ANIMATION */
+
 
 .fade-left,
 .fade-right{
@@ -1232,7 +1232,6 @@
   transform:translateX(0);
 }
 
-/* TABLET */
 
 @media(max-width:992px){
   .healthcare-container{
@@ -1245,7 +1244,7 @@
   }
 }
 
-/* MOBILE */
+
 
 @media(max-width:600px){
   .healthcare-solutions{
@@ -1413,7 +1412,7 @@
   z-index:2;
 }
 
-/* TABLET */
+
 
 @media(max-width:1100px){
   .team-container{
@@ -1425,7 +1424,7 @@
   }
 }
 
-/* MOBILE */
+
 
 @media(max-width:600px){
   .team-section{
@@ -1642,5 +1641,266 @@
   .about-cta-btn{
     width:100%;
   }
+
+}
+
+
+
+@media screen and (max-width:639px){
+
+
+.about-hero,
+.story-section,
+.mission-vision-section,
+.sets-apart-section,
+.core-values-section,
+.healthcare-solutions,
+.team-section,
+.about-cta-section{
+    padding:60px 5%;
+}
+
+
+.about-hero-content h1,
+.story-content h2,
+.mv-heading h2,
+.sets-heading h2,
+.core-values-heading h2,
+.solutions-left h2,
+.team-heading h2,
+.about-cta-content h2{
+    font-size:30px !important;
+    line-height:1.3;
+}
+
+
+.about-hero-content p,
+.story-content p,
+.mv-heading p,
+.sets-heading p,
+.team-heading p,
+.about-cta-content p{
+    font-size:15px;
+}
+
+
+
+.about-hero-container{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.about-hero-btns{
+    flex-direction:column;
+}
+
+.hero-btn{
+    width:100%;
+}
+
+.about-hero-image img{
+    height:300px;
+}
+
+.hero-floating-card{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    margin-top:20px;
+}
+
+
+
+.hero-stats{
+    flex-direction:column;
+}
+
+.hero-stat-box{
+    width:100%;
+}
+
+
+
+.story-container{
+    grid-template-columns:1fr;
+}
+
+.story-buttons{
+    flex-direction:column;
+}
+
+.story-btn{
+    width:100%;
+}
+
+.story-image img{
+    height:300px;
+}
+
+
+
+.mv-container{
+    grid-template-columns:1fr;
+}
+
+
+
+.sets-container{
+    grid-template-columns:1fr;
+}
+
+
+
+.core-values-container{
+    grid-template-columns:1fr;
+}
+
+
+
+.healthcare-container{
+    grid-template-columns:1fr;
+}
+
+.solutions-right{
+    grid-template-columns:1fr;
+}
+
+
+
+.team-container{
+    grid-template-columns:1fr;
+}
+
+
+.about-cta-box{
+    flex-direction:column;
+    text-align:center;
+}
+
+.about-cta-buttons{
+    flex-direction:column;
+    width:100%;
+}
+
+.about-cta-btn{
+    width:100%;
+}
+
+}
+
+
+
+@media screen and (min-width:640px) and (max-width:1024px){
+
+.about-hero,
+.story-section,
+.mission-vision-section,
+.sets-apart-section,
+.core-values-section,
+.healthcare-solutions,
+.team-section,
+.about-cta-section{
+    padding:70px 6%;
+}
+
+
+
+.about-hero-container{
+    grid-template-columns:1fr;
+}
+
+.about-hero-content h1{
+    font-size:42px;
+}
+
+.about-hero-image img{
+    height:400px;
+}
+
+
+
+.story-container{
+    grid-template-columns:1fr;
+}
+
+
+
+.mv-container{
+    grid-template-columns:1fr;
+}
+
+
+
+.sets-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+
+
+.core-values-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+
+
+.healthcare-container{
+    grid-template-columns:1fr;
+}
+
+.solutions-right{
+    grid-template-columns:repeat(2,1fr);
+}
+
+
+
+.team-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+
+
+.about-cta-box{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+
+
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+.about-hero-container,
+.story-container,
+.healthcare-container{
+    gap:50px;
+}
+
+.team-container{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.sets-container{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.core-values-container{
+    grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+
+
+@media screen and (min-width:1281px){
+
+.about-hero-container,
+.story-container,
+.healthcare-container,
+.team-container,
+.sets-container{
+    max-width:1450px;
+    margin:auto;
+}
 
 }
